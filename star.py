@@ -28,9 +28,6 @@ inner_points = [(int(center_x + np.cos(np.radians(angle + 36)) * inner_radius),
 
 coordinates = np.array([], np.int32)
 for i in range(5):
-    j = i+1
-    if(j >= 5):
-        j = 0
     point1 = np.array(outer_points[i]).reshape(1, -1)
     point2 = np.array(inner_points[i]).reshape(1, -1)
     coordinates = np.vstack((coordinates, point1)) if coordinates.size else point1
